@@ -1,0 +1,11 @@
+[Unit]
+Description=Website
+
+[Service]
+Type=simple
+WorkingDirectory=/website
+ExecStart=zola serve --port 8000
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
